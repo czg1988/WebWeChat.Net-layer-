@@ -55,7 +55,7 @@
             <div class="form-actions">
                 <asp:Button ID="BtnLogin" class="btn green uppercase" runat="server" Text="登录" OnClick="BtnLogin_Click" />
                 <label class="rememberme check mt-checkbox mt-checkbox-outline">
-                    <input type="checkbox" name="remember" value="1" />Remember
+                    <input type="checkbox" name="remember" value="1" />记住
                     <span></span>
                 </label>
             </div>
