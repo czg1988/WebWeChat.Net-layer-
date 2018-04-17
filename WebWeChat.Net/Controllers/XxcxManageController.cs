@@ -155,7 +155,7 @@ namespace WebWeChat.Net.Controllers
                     uin = t_dt.Rows[0][0].ToString();
                 }
             }
-            string sql = "select * FROM Dialogue where (FromUin = '" + uin + "' and ToUin = '" + customer_uin + "') or (ToUin = '" + uin + "' and FromUin = '" + customer_uin + "') order by SystemTime asc";
+            string sql = "select *,sysTime=CONVERT(varchar(20),SystemTime,120) FROM Dialogue where (FromUin = '" + uin + "' and ToUin = '" + customer_uin + "') or (ToUin = '" + uin + "' and FromUin = '" + customer_uin + "') order by SystemTime asc";
             DataTable dt = db.SelectDT(sql, null);
             if (dt != null && dt.Rows.Count > 0)
             {

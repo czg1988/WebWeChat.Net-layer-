@@ -194,7 +194,7 @@
                                 + '<div class="message">'
                                 + '<span class="arrow"></span>'
                                 + '<a href="javascript:;" class="name"> ' + data[i].FromNickName + '</a>'
-                                + '<span class="datetime"> ' + data[i].SysTime + '</span>'
+                                + '<span class="datetime"> ' + data[i].sysTime + '</span>'
                                 + '<span class="body"> ' + data[i].DContent + '</span>'
                                 + '</div>'
                                 + '</li > '
