@@ -9,7 +9,7 @@
 <!-- BEGIN HEAD -->
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>XX医院诊疗辅助咨询系统</title>
+    <title>医院诊疗辅助咨询系统</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
