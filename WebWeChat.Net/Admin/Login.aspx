@@ -9,7 +9,7 @@
 <!-- BEGIN HEAD -->
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>XX123医院诊疗辅助咨询系统</title>
+    <title>医院诊疗辅助咨询系统</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
@@ -43,7 +43,24 @@
     <!-- END LOGO -->
     <!-- BEGIN LOGIN -->
     <div class="content">
-        <form class="login-form" id="form1" runat="server">
+     <%--   <form class="login-form" id="form1" runat="server">
+            <h3 class="form-title font-green">登录系统</h3>
+            <div class="form-group">
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                <label class="control-label visible-ie8 visible-ie9">Username</label>
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="用户名" id="username" name="username" runat="server"/> </div>
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">Password</label>
+                <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="密码" id="password" name="password" runat="server"/> </div>
+            <div class="form-actions">
+                <asp:Button ID="BtnLogin" class="btn green uppercase" runat="server" Text="登录" OnClick="BtnLogin_Click" />
+                <label class="rememberme check mt-checkbox mt-checkbox-outline">
+                    <input type="checkbox" name="remember" value="1" />Remember
+                    <span></span>
+                </label>
+            </div>
+        </form>--%>
+           <form class="login-form" id="form1" runat="server">
             <h3 class="form-title font-green">登录系统</h3>
             <div class="form-group">
                 <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
