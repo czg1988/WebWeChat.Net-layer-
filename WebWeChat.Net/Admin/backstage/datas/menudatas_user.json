@@ -1,0 +1,64 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": [
+    {
+      "id": "1046",
+      "pid": "1000",
+      "title": "后台首页",
+      "font": "larry-icon",
+      "icon": "larry-shouye4",
+      "url": "html/main.html",
+      "spread": false
+    },
+    {
+      "id": "1046",
+      "pid": "1000",
+      "title": "客服中心",
+      "font": "larry-icon",
+      "icon": "larry-paikexitong_yonghuguanli",
+      "url": "",
+      "spread": false,
+      "children": [
+        {
+          "id": "1047",
+          "pid": "1000",
+          "title": "客服管理",
+          "font": "larry-icon",
+          "icon": "larry-yonghuliebiao",
+          "url": "page/kfzx/csd_list.aspx",
+          "spread": false
+        }
+      ]
+    },
+    {
+      "id": "1046",
+      "pid": "1000",
+      "title": "信息查询",
+      "font": "larry-icon",
+      "icon": "larry-gerenxinxi1",
+      "url": "",
+      "spread": false,
+      "children": [
+        {
+          "id": "1047",
+          "pid": "1000",
+          "title": "咨询列表",
+          "font": "larry-icon",
+          "icon": "larry-cf-c57",
+          "url": "page/xxcx/customer_list.aspx",
+          "spread": false
+        },
+        {
+          "id": "1047",
+          "pid": "1000",
+          "title": "聊天记录",
+          "font": "larry-icon",
+          "icon": "larry-wangzhan",
+          "url": "page/xxcx/dialogue_list.aspx",
+          "spread": false
+        }
+      ]
+    }
+  ]
+}
