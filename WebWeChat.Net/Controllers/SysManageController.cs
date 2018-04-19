@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 using Web.common;
 
 namespace WebWeChat.Net.Controllers
@@ -221,6 +222,82 @@ namespace WebWeChat.Net.Controllers
                 return Json(Tools.GetResult(false, "", null));
             }
 
+        }
+
+
+        public string TztjfxWxB()
+        {
+            JavaScriptSerializer jsS = new JavaScriptSerializer();
+            List<object> list = new List<object>();
+
+
+            string sql = "SELECT zclb,COUNT(*) num FROM wxjl w,sysbtz s where w.jszxbh =s.jszxbh and zclb in( select nr from  zdb_q where zdm = 'zclb' and xh!= 0 ) group by zclb order by num desc";
+            DataTable dt = db.SelectDT(sql, null);
+            if (null != dt && dt.Rows.Count > 0)
+            {
+
+                for (int a = 0; a < dt.Rows.Count; a++)
+                {
+                    Obj o = new Obj();
+                    o.value = dt.Rows[a]["num"].ToString();
+                    o.name = dt.Rows[a]["zclb"].ToString();
+                    list.Add(o);
+                }
+            }
+            return jsS.Serialize(list);
+        }
+
+        public JsonResult UpdatePwd()
+        {
+            string uin = Session["uin"].ToString().Trim();
+            string oldPwd = Request["oldpwd"];
+            string newpwd = Request["newpwd"];
+            if (null != uin)
+            {
+                string oPwdMd5 = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(oldPwd, "MD5").ToLower();
+                string nPwdMd5 = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(newpwd, "MD5").ToLower();
+
+                string sql1 = "SELECT * FROM csd where uin='" + uin + "' and password = '" + oPwdMd5 + "'";
+                DataTable dt = db.SelectDT(sql1, null);
+                if (null != dt && dt.Rows.Count > 0)
+                {
+                    sql1 = "update csd set password ='" + nPwdMd5 + "' where uin='" + uin + "'";
+                    bool flag = db.Update(sql1, null);
+                    if (flag)
+                    {
+                        return Json(Tools.GetResult(true, "修改成功", null));
+                    }
+                    else
+                    {
+                        return Json(Tools.GetResult(false, "修改失败", null));
+                    }
+                }
+                else
+                {
+                    return Json(Tools.GetResult(false, "原密码输入不正确", null));
+
+                }
+            }
+            else
+            {
+                return Json(Tools.GetResult(false, "0", null));
+            }
+        }
+        internal class Obj
+        {
+            private string _name;
+            private string _value;
+
+            public string value
+            {
+                get { return _value; }
+                set { _value = value; }
+            }
+            public string name
+            {
+                get { return _name; }
+                set { _name = value; }
+            }
         }
 
 

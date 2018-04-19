@@ -15,9 +15,11 @@ namespace WebWeChat.Net.Admin.backstage.page.kfzx
         public ConnectionDb PowerDb = new ConnectionDb();
         public string uin = "";
         public string customer_uin = "";
+        public string nickname = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             uin = Request.QueryString["uin"];
+            nickname= getNickName(uin);
             //customer_uin= Request.QueryString["customer_uin"];
             //this.key.Attributes.Add("onchange", GetPostBackEventReference(this.key));
 
@@ -26,6 +28,13 @@ namespace WebWeChat.Net.Admin.backstage.page.kfzx
             //    frieng_load(friend_lists,"");//-->绑定客服
             //    dialogue_load(dialogue_lists, customer_uin);
             //}
+        }
+
+        private string getNickName(string uin)
+        {
+            string sql = "select nickname from csd where uin = '" + uin + "'";
+            DataTable dt = PowerDb.SelectDT(sql, null);
+            return dt.Rows[0][0].ToString().Trim();
         }
 
         private void dialogue_load(Repeater rp ,string to)

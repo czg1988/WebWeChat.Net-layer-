@@ -26,6 +26,9 @@ namespace WebChatManager
 
                 if (null != dt && dt.Rows.Count > 0)
                 {
+                    sql = "update csd set logintime  = '" + DateTime.Now + "' where id = " + int.Parse(dt.Rows[0]["id"].ToString().Trim());
+                    db.Update(sql, null);
+
                     Session["uin"] = dt.Rows[0]["uin"].ToString().Trim();
                     Session["nickname"] = dt.Rows[0]["nickname"].ToString().Trim();
                     Session["user_id"] = dt.Rows[0]["id"].ToString().Trim();

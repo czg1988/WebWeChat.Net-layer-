@@ -15,11 +15,11 @@
 .head-info i.larry-icon:hover{color:#FFB800;}
 
 /*快捷方式*/
-.larry-shortcut section.shortcut{height:85px;background:#FFFFFF;-webkit-border-radius:4px;border-radius:4px;cursor:pointer;}
+.larry-shortcut section.shortcut{height:95px;background:#FFFFFF;-webkit-border-radius:4px;border-radius:4px;cursor:pointer;}
 .larry-shortcut section.shortcut a{display:block;width:100%;height:100%;}
-.larry-shortcut section.shortcut .larry-ico{height:83px;width:38%;-webkit-border-radius:4px 0px 0px 4px;border-radius:4px 0px 0px 4px;text-align:center;line-height:83px;position:absolute;top:1px;left:1px;color:#fff;}
+.larry-shortcut section.shortcut .larry-ico{height:93px;width:38%;-webkit-border-radius:4px 0px 0px 4px;border-radius:4px 0px 0px 4px;text-align:center;line-height:83px;position:absolute;top:1px;left:1px;color:#fff;}
 .larry-shortcut section.shortcut .larry-ico i{display:inline-block;vertical-align:middle;font-size:3em;color:#fff;}
-.larry-shortcut section.shortcut .larry-value{width:61%;height:75px;text-align:center;position:absolute;top:1px;right:1px;padding-top:8px;color:#000;}
+.larry-shortcut section.shortcut .larry-value{width:61%;height:95px;text-align:center;position:absolute;top:1px;right:1px;padding-top:18px;color:#000;}
 .larry-shortcut section.shortcut .larry-value span.nums{display:block;width:100%;height:30px;line-height:35px;font-size:16px;text-align:center;}
 .larry-shortcut section.shortcut .larry-value cite{display:block;width:100%;height:40px;line-height:28px;font-size:14px;text-align:center;}
 .larry-shortcut section.shortcut .larry-value cite.un-nums{display:block;width:100%;height:75px;line-height:65px;text-align:center;font-size:14px;}

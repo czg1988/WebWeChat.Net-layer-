@@ -135,7 +135,7 @@
                 <!-- tab title end -->
                 <div class="layui-tab-content larryms-tab-content" id="larry_tab_content">
                     <div class="layui-tab-item layui-show">
-                        <iframe class="larry-iframe" data-id='0' name="ifr_0" id='ifr0'  src="html/main.html" frameborder="no" border="0"></iframe>
+                        <iframe class="larry-iframe" data-id='0' name="ifr_0" id='ifr0'  src="page/main.aspx" frameborder="no" border="0"></iframe>
                     </div>
                 </div>
                 <!-- tab content end -->

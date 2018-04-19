@@ -151,6 +151,13 @@
     <Compile Include="Admin\backstage\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\backstage\page\main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\backstage\page\main.aspx.designer.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\logout.aspx.cs">
       <DependentUpon>logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -271,6 +278,7 @@
     <Compile Include="ConnectionDb.cs" />
     <Compile Include="Controllers\KfzxController.cs" />
     <Compile Include="Controllers\SysManageController.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
     <Compile Include="Controllers\XxcxManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -297,6 +305,7 @@
     <Content Include="Admin\backstage\datas\menu.js" />
     <Content Include="Admin\backstage\images\user1.jpg" />
     <Content Include="Admin\backstage\index.aspx" />
+    <Content Include="Admin\backstage\page\main.aspx" />
     <Content Include="Admin\logout.aspx" />
     <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\backstage\page\kfzx\csd_info.aspx" />
@@ -6708,10 +6717,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\Uploads\WeiXin\" />
     <Folder Include="App_Data\" />
     <Folder Include="assets\global\plugins\angularjs\plugins\angular-file-upload\uploads\" />
     <Folder Include="Views\Kfzx\" />
     <Folder Include="Views\SysManage\" />
+    <Folder Include="Views\Upload\" />
     <Folder Include="Views\XxcxManage\" />
   </ItemGroup>
   <ItemGroup>

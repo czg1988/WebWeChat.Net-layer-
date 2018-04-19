@@ -144,7 +144,7 @@
                                                     <img  src="/Handlers/HeadImgHandler.ashx?tb=CSD&uin=<%#((DataRowView)Container.DataItem)["Uin"]%>" width="80px" height="80px"> 
                                                 </div>
                                                 <div class="mt-body">
-                                                    <h3 class="mt-username"><a style="color:#1AA094" href="csd_info.aspx"><%#((DataRowView)Container.DataItem)["NickName"]%></a>（好友：<a style="color:#1AA094" onclick="toFriendPage(<%#((DataRowView)Container.DataItem)["Uin"]%>)" href="javascript:void(0)"><%#((DataRowView)Container.DataItem)["friends"]%></a>）</h3>
+                                                    <h3 class="mt-username"><a style="color:#1AA094" href="csd_info.aspx?uin=<%#((DataRowView)Container.DataItem)["Uin"]%>"><%#((DataRowView)Container.DataItem)["NickName"]%></a>（好友：<a style="color:#1AA094" onclick="toFriendPage(<%#((DataRowView)Container.DataItem)["Uin"]%>)" href="javascript:void(0)"><%#((DataRowView)Container.DataItem)["friends"]%></a>）</h3>
                                                     <p class="mt-user-title">妇产科（主任） </p>
                                                     <p class="mt-user-title"><a href="record_list.aspx">最后回复：预产期2018年12月8号。</a>2018-03-15 8:12</p>
                                                 </div>
@@ -183,7 +183,7 @@
                 resize: true,
                 shadeClose: false, //点击遮罩关闭层
                 area: ['90%', '90%'],
-                content: 'page/kfzx/friend_list.aspx?uin=' + uin,
+                content: 'page/kfzx/friend_list.aspx?uin=' + uin ,
                 scrolling: 'no',
                 cancel: function (layero, index) {
                     flag = false;

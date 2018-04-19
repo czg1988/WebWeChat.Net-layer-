@@ -71,7 +71,30 @@ namespace WebWeChat.Net.Controllers
             var data = new { data = ConvertHelper.GetJSonArrayList(dt) };
             return Json(data, JsonRequestBehavior.AllowGet);
         }
-        
+
+
+
+        public JsonResult SaveorUpdateUserInfo()
+        {
+            string uin = Request["user_uin"];
+            string realname = Request["realname"];
+            string certnumber = Request["certnumber"];
+            string tel = Request["tel"];
+            string email = Request["email"];
+            bool flag = true;
+
+            string sql = "update csd set realname = '" + realname + "' ,certnumber='" + certnumber + "',mobile='" + tel + "',email='" + email + "' where uin = '"+uin+"'";
+            flag = db.Update(sql, null);
+
+            if (flag)
+            {
+                return Json(Tools.GetResult(true, "保存成功", null));
+            }
+            else
+            {
+                return Json(Tools.GetResult(false, "保存失败", null));
+            }
+        }
 
         public string xxHTML(string html)
         {

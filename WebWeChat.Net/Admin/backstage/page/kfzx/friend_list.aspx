@@ -57,7 +57,7 @@
                         <div class="portlet-title tabbable-line">
                             <div class="caption">
                                 <i class="icon-bubbles font-dark hide"></i>
-                                <span class="caption-subject font-dark bold uppercase"><font color="red"><%=Session["nickname"] %></font>的好友列表</span>
+                                <span class="caption-subject font-dark bold uppercase"><font color="red"><%=nickname %></font>的好友列表</span>
                             </div>
                             <div class="actions">
                                 <div class="portlet-input input-inline">

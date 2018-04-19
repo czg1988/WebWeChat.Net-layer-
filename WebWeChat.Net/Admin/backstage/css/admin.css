@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /**
  * @Title: LarryMS
  * @Date: 2017-11-15
@@ -9,12 +9,12 @@
  * @Version:larryMS2.08
  * @Last Modified time: 2017-11-15 09:00:00
  */
-.admin-info{padding:50px 20px 35px 20px;}
+.admin-info{padding:20px 20px 20px 20px;}
 .admin-info .photo{display:block;width:130px;height:130px;margin:0 auto;border-radius:50%;}
 .admin-info .photo img{display:block;width:100%;height:100%;border:none;border-radius:50%;}
 .larryms-user{display:block;width:100%;height:30px;line-height:30px;text-align:center;padding-top:15px;color:#333;font-size:16px;}
 .login-time{display:block;width:100%;height:30px;line-height:30px;text-align:center;font-size:14px;color:#666777;}
-.admin-log{background:#F6F9FD;padding:15px 20px 15px 20px;}
+.admin-log{background:#F6F9FD;padding:10px 20px 10px 20px;}
 .admin-log .larryms-con{padding-top:0px;}
 .admin-log .larryms-con .larry-layer em.larryms-stat-count{display:block;width:100%;height:20px;font-size:18px;line-height:20px;color:#666;font-weight:normal;text-align:center;}
 .admin-log .larryms-con .larry-layer span{display:block;width:100%;font-size:14px;color:#A3AFB7;text-align:center;}

@@ -29,7 +29,7 @@ layui.define(['jquery','larry'],function(exports){
            month = myDate.getMonth()+1,
            day = myDate.getDate(),
            time = myDate.toLocaleTimeString();
-       $('#weather').html('您好，现在时间是：'+year+'年'+month+'月'+day+'日 '+time+'（LarryMS官网晚些时候会提供大量实用API接口供大家使用）');
+       $('#weather').html('您好，现在时间是：'+year+'年'+month+'月'+day+'日 '+time);
        $('#versionT').text(larryms.version);
     // 百度echarts加入
     larryms.plugin('echarts.js',statistics);
